@@ -1,0 +1,239 @@
+/* Импорт шрифтов Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Основные стили для страницы */
+body {
+    margin: 0;
+    font-family: "Inter", serif;
+    background: linear-gradient(180deg, #203025 0%, #251f18 100%);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Основной блок с контентом */
+#main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 30px;
+    background: rgba(32, 48, 37, 0.7);
+    backdrop-filter: blur(22.6px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Навигационное меню */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 30px 0;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(22.6px);
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Логотип */
+.logo-logo {
+    text-align: center;
+    margin: 10px;
+}
+
+.logo {
+    margin-top: -40px;
+    margin-bottom: -25px;
+    display: inline-flex;
+    width: clamp(200px, 30vw, 300px);
+    height: auto;
+}
+
+.logo-main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+/* Контейнер для текста меню */
+.nav-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-text a {
+    text-decoration: none;
+    color: inherit;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.nav-text p {
+    margin: 0;
+    padding: 8px 15px;
+    font-family: var(--font-family);
+    font-weight: 200;
+    font-size: clamp(18px, 2vw, 24px);
+    text-transform: lowercase;
+    color: #fff;
+}
+
+/* Эффект при наведении */
+.nav-text a:hover,
+.nav-text a:focus {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* Сохранение эффекта после клика */
+.nav-text a.active {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+/* Стили для страницы с подробной информацией */
+.container-main {
+    padding: 20px;
+    background: rgba(32, 48, 37, 0.7);
+    backdrop-filter: blur(22.6px);
+    border-radius: 30px;
+    margin: 20px 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.main-container,
+.main-container-2,
+.main-container-3 {
+    margin-bottom: 30px;
+}
+
+.wrapper-main,
+.wrapper-main-2,
+.wrapper-main-3 {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.img-wrapper,
+.img-right {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+.text-wrapper,
+.text-wrapper-2,
+.text-wrapper-3 {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.text-wrapper p,
+.text-wrapper-2 p,
+.text-wrapper-3 p {
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.text-wrapper-2 h2,
+.text-wrapper-3 h2 {
+    font-size: clamp(36px, 8vw, 100px);
+    font-weight: 900;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+
+.wrapper-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img-1 {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 20px 0;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    #main-content {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .container-main {
+        padding: 15px;
+    }
+
+    .wrapper-main,
+    .wrapper-main-2,
+    .wrapper-main-3 {
+        padding: 15px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .wrapper-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .text-wrapper-2 {
+        flex: 1;
+    }
+
+    .img-1 {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1025px) {
+    .wrapper-container {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .text-wrapper-2 {
+        flex: 1;
+    }
+
+    .img-1 {
+        flex: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-wrapper-2 h2,
+    .text-wrapper-3 h2 {
+        font-size: 36px;
+    }
+
+    .text-wrapper p,
+    .text-wrapper-2 p,
+    .text-wrapper-3 p {
+        font-size: 14px;
+    }
+} 

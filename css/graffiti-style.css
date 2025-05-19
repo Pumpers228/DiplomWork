@@ -1,0 +1,339 @@
+/* Импорт шрифтов Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Основные стили для страницы */
+body {
+    margin: 0;
+    /* Убираем внешние отступы */
+    font-family: "Inter", serif;
+    /* Подключаем шрифт Inter */
+    background: linear-gradient(180deg, #203025 0%, #251f18 100%);
+    /* Градиентный фон */
+    color: #ffffff;
+    /* Белый цвет текста */
+    overflow-x: hidden;
+}
+
+/* Основной блок с контентом */
+#main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 30px;
+    background: rgba(32, 48, 37, 0.7);
+    backdrop-filter: blur(22.6px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Навигационное меню */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    margin: 30px 0;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(22.6px);
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Логотип */
+.logo-logo {
+    text-align: center;
+    margin: 10px;
+}
+
+.logo {
+    margin-top: -40px;
+    margin-bottom: -25px;
+    display: inline-flex;
+    width: clamp(200px, 30vw, 300px);
+    /* Можно увеличить или уменьшить по необходимости */
+    height: auto;
+    /* Сохраняет пропорции изображения */
+}
+
+.logo-main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+/* Контейнер для текста меню */
+.nav-text {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-text a {
+    text-decoration: none;
+    /* Убираем подчеркивание у ссылок */
+    color: inherit;
+    /* Наследуем цвет текста */
+    transition: text-shadow 0.3s ease-in-out;
+    /* Плавный переход */
+}
+
+.nav-text p {
+    margin: 0;
+    padding: 8px 15px;
+    font-family: var(--font-family);
+    font-weight: 200;
+    font-size: clamp(18px, 2vw, 24px);
+    text-transform: lowercase;
+    color: #fff;
+}
+
+/* Эффект при наведении */
+.nav-text a:hover,
+.nav-text a:focus {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+    /* Подсветка текста */
+}
+
+/* Сохранение эффекта после клика */
+.nav-text a.active {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+.text {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: lowercase;
+    padding: 0 15px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(32, 48, 37, 0.7);
+    backdrop-filter: blur(22.6px);
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    margin-top: -30px;
+    margin-bottom: 0px;
+    /* Убирает внешний отступ снизу */
+    font-size: clamp(36px, 8vw, 100px);
+    /* Задаёт размер шрифта в 100 пикселей */
+    font-weight: 900;
+    /* Использует жирный шрифт */
+    text-transform: uppercase;
+    /* Преобразует весь текст в верхний регистр */
+}
+
+.header p {
+    font-size: clamp(16px, 2vw, 20px);
+    /* Задаёт размер шрифта в 20 пикселей */
+    font-weight: 200;
+    /* Использует лёгкий шрифт */
+    text-transform: lowercase;
+    /* Преобразует весь текст в нижний регистр */
+    padding: 0 15px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.gallery-item {
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background: rgba(32, 48, 37, 0.7);
+    backdrop-filter: blur(22.6px);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item img {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+}
+
+.gallery-item h2 {
+    font-size: clamp(24px, 4vw, 48px);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 15px 0;
+}
+
+.gallery-item p {
+    font-size: clamp(14px, 1.5vw, 16px);
+    font-weight: 300;
+    padding: 0 10px;
+}
+
+.pers-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 40px;
+    background: rgba(32, 48, 37, 0.7);
+    backdrop-filter: blur(22.6px);
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pers {
+    width: 100%;
+    max-width: 500px;
+    padding: 0;
+    margin: 0;
+}
+
+.pers img {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+}
+
+.pers-text {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.pers-text h2 {
+    font-size: clamp(36px, 8vw, 100px);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+
+.pers-text p {
+    font-size: clamp(16px, 2vw, 20px);
+    font-weight: 200;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    #main-content {
+        width: 95%;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .nav-menu {
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .nav-text {
+        gap: 5px;
+    }
+
+    .nav-text p {
+        padding: 5px 10px;
+    }
+
+    .gallery {
+        gap: 15px;
+    }
+
+    .gallery-item {
+        padding: 10px;
+    }
+}
+
+/* Адаптивные стили для планшетов */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #main-content {
+        width: 90%;
+        margin: 15px auto;
+        padding: 25px;
+    }
+
+    .nav-text {
+        gap: 15px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивные стили для больших экранов */
+@media (min-width: 1025px) {
+    #main-content {
+        width: 85%;
+        margin: 30px auto;
+        padding: 40px;
+    }
+
+    .pers-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .pers-text {
+        text-align: left;
+    }
+}
+
+/* Улучшения для очень маленьких экранов */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 28px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .gallery-item h2 {
+        font-size: 20px;
+    }
+
+    .gallery-item p {
+        font-size: 12px;
+    }
+
+    .pers-text h2 {
+        font-size: 28px;
+    }
+
+    .pers-text p {
+        font-size: 14px;
+    }
+}
+
+
